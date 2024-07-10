@@ -14,7 +14,7 @@ import logo from '../images/lidoLogo.jpg'
 
 export default {
   name: 'Navbar',
-  data () {
+  data() {
     return {
       logo: logo, // Assign the imported logo to the 'logo' data property
       links: [
@@ -28,6 +28,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
   .navbar {
     position: sticky; /* Make the navbar sticky */
@@ -40,7 +41,6 @@ export default {
     align-items: center;
     justify-content: flex-start; /* Center items horizontally */
     z-index: 1000; /* Ensure it's above other content */
-    width: 100%; /* Take full width of the viewport */
   }
   .navbar-image {
     width: 20rem;
@@ -67,3 +67,4 @@ export default {
     color: #b8b8b8;
   }
 </style>
+
