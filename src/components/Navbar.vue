@@ -1,0 +1,71 @@
+<template>
+  <nav class="navbar">
+    <img class="navbar-image" :src="logo" alt="Lido Panciteria">
+    <div class="navbar-items">
+      <div v-for="link in links" :key="link.text" class="navbar-item">
+        <a :href="link.url">{{ link.text }}</a>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script>
+import logo from '../images/lidoLogo.jpg'
+
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+      logo: logo, // Assign the imported logo to the 'logo' data property
+      links: [
+        { text: 'Home', url: '#/' },
+        { text: 'About', url: '#/about' },
+        { text: 'Services', url: '#/services' },
+        { text: 'Contact', url: '#/contact' }
+      ]
+    }
+  }
+}
+</script>
+
+
+<style scoped>
+  .navbar {
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #ffffff;
+    padding: 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Center items horizontally */
+    z-index: 1000; /* Ensure it's above other content */
+    width: 100%; /* Take full width of the viewport */
+  }
+  .navbar-image {
+    width: 20rem;
+  }
+  .navbar-items {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    width: 100%; /* Full width of the parent container */
+    max-width: 500px; /* Limit maximum width */
+  }
+  .navbar-item {
+    text-align: center;
+  }
+  .navbar a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navbar a:hover {
+    /*background-color: #f0f0f0;*/
+    color: #b8b8b8;
+  }
+</style>
+
