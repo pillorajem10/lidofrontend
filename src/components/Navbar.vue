@@ -14,7 +14,7 @@ import logo from '../images/lidoLogo.jpg'
 
 export default {
   name: 'Navbar',
-  data() {
+  data () {
     return {
       logo: logo, // Assign the imported logo to the 'logo' data property
       links: [
@@ -27,7 +27,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
   .navbar {
@@ -68,4 +67,3 @@ export default {
     color: #b8b8b8;
   }
 </style>
-
