@@ -1,9 +1,21 @@
 <template>
-  <div class="home">
-    <div v-for="(item, index) in items" :key="index" class="card">
-      <img :src="item.image" :alt="item.name" class="card-image">
-      <h3>{{ item.name }}</h3>
-      <p>Price: {{ formatPrice(item.price) }}</p>
+  <div>
+    <div class="slider">
+      <carousel>
+        <slide>
+          <img src="../images/slider1.jpg" alt="Slide 1">
+        </slide>
+        <slide>
+          <img src="../images/slider2.jpg" alt="Slide 2">
+        </slide>
+      </carousel>
+    </div>
+    <div class="home">
+      <div v-for="(item, index) in items" :key="index" class="card">
+        <img :src="item.image" :alt="item.name" class="card-image">
+        <h3>{{ item.name }}</h3>
+        <p>Price: {{ formatPrice(item.price) }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -19,9 +31,14 @@ import lidosSiphonBrewedCoffee from '../images/lidosSiphonBrewedCoffee.jpg'
 import bilaoFeast from '../images/bilaoFeast.jpg'
 import BlcFeast from '../images/BlcFeast.jpg'
 import shrimpBalls from '../images/shrimpBalls.png'
+import { Carousel, Slide } from 'vue-carousel'
 
 export default {
   name: 'Home',
+  components: {
+    Carousel,
+    Slide
+  },
   data () {
     return {
       items: [
@@ -55,18 +72,14 @@ export default {
   }
 
   .card {
-    width: 20rem;
+    width: 15rem;
     margin: 1rem; /* Add margin between cards */
     padding: 1.5rem;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     transition: box-shadow 0.3s ease; /* Smooth shadow transition */
     text-align: center; /* Center text */
-  }
-
-  .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
   }
 
   .card h3 {
@@ -80,5 +93,13 @@ export default {
   .card-image {
     max-width: 100%;
     border-radius: 8px 8px 0 0; /* Rounded corners on top only */
+  }
+  .slider {
+    width: 100%;
+  }
+
+  .slider img {
+    width: 100%;
+    height: auto;
   }
 </style>
