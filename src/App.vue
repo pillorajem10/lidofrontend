@@ -1,8 +1,6 @@
 <template>
   <div class="grid-container">
-    <header>
-      <Navbar/>
-    </header>
+    <Navbar/>
     <main class="grid">
       <router-view/>
     </main>

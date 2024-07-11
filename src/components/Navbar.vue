@@ -19,7 +19,6 @@ export default {
       logo: logo, // Assign the imported logo to the 'logo' data property
       links: [
         { text: 'About', url: '#/about' },
-        { text: 'Services', url: '#/services' },
         { text: 'Contact', url: '#/contact' }
       ]
     }
@@ -47,7 +46,7 @@ export default {
     margin-left: 1rem;
     justify-content: space-around; /* Distribute items evenly */
     width: 100%; /* Full width of the parent container */
-    max-width: 20rem; /* Limit maximum width */
+    max-width: 10rem; /* Limit maximum width */
   }
   .navbar-item {
     text-align: center;
@@ -63,5 +62,15 @@ export default {
   .navbar a:hover {
     /*background-color: #f0f0f0;*/
     color: #b8b8b8;
+  }
+
+  @media (max-width: 700px) {
+    .navbar-image  {
+      width: 10rem;
+    }
+
+    .navbar a {
+      font-size: 11px;
+    }
   }
 </style>

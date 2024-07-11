@@ -102,4 +102,25 @@ export default {
     width: 100%;
     height: auto;
   }
+
+  @media (max-width: 700px) {
+    .nameFields {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nameFields .fieldContainer {
+        width: 100%;
+    }
+
+    .card {
+      width: 5rem;
+    }
+
+    .card h3 {
+      font-size: 12px;
+      font-weight: bolder;
+    }
+
+}
 </style>

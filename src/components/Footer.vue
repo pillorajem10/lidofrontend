@@ -24,4 +24,10 @@ export default {
     margin-top: auto;
     padding: 1rem;
   }
+
+  @media (max-width: 700px) {
+    .footer {
+      font-size: 10px;
+    }
+  }
   </style>
