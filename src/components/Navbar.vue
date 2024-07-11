@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <img class="navbar-image" :src="logo" alt="Lido Panciteria">
+    <a href="#/"><img class="navbar-image" :src="logo" alt="Lido Panciteria"></a>
     <div class="navbar-items">
       <div v-for="link in links" :key="link.text" class="navbar-item">
         <a :href="link.url">{{ link.text }}</a>
@@ -18,7 +18,6 @@ export default {
     return {
       logo: logo, // Assign the imported logo to the 'logo' data property
       links: [
-        { text: 'Home', url: '#/' },
         { text: 'About', url: '#/about' },
         { text: 'Services', url: '#/services' },
         { text: 'Contact', url: '#/contact' }
@@ -44,14 +43,15 @@ export default {
     width: 20rem;
   }
   .navbar-items {
-    padding: 1rem;
     display: flex;
+    margin-left: 1rem;
     justify-content: space-around; /* Distribute items evenly */
     width: 100%; /* Full width of the parent container */
-    max-width: 500px; /* Limit maximum width */
+    max-width: 20rem; /* Limit maximum width */
   }
   .navbar-item {
     text-align: center;
+    margin-left: 1rem;
   }
   .navbar a {
     color: #333333;

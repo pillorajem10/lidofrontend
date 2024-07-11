@@ -1,6 +1,7 @@
 <template>
-    <div>
-      <h1>About</h1>
+    <div class="about">
+      <h1>HOME OF CHINESE PUGON-ROASTED ASADO</h1>
+      <p>We take you back to the year 1936 when calesas clonked their way down the bustling streets and esquinitas of Binondo. On one of the narrow alleys stood a modest eatery called Panciteria Lido, owned by a Cantonese chef, known as Mr. Lido.</p>
     </div>
   </template>
 
@@ -12,18 +13,11 @@ export default {
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
+    .about {
+      display: flex;
+      margin: 2%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
