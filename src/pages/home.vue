@@ -108,7 +108,7 @@ export default {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .nameFields .fieldContainer {
         width: 100%;
     }

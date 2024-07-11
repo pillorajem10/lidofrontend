@@ -28,7 +28,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            
+
             <button type="submit">Submit</button>
         </form>
     </div>
@@ -86,7 +86,7 @@ button:hover {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .nameFields .fieldContainer {
         width: 100%;
     }
