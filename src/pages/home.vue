@@ -14,7 +14,7 @@
       <div v-for="(item, index) in items" :key="index" class="card">
         <img :src="item.image" :alt="item.name" class="card-image">
         <h3>{{ item.name }}</h3>
-        <p>Price: {{ formatPrice(item.price) }}</p>
+        <p class="price">Price: {{ formatPrice(item.price) }}</p>
       </div>
     </div>
   </div>
@@ -49,8 +49,8 @@ export default {
         { name: 'Manchurian Wings', price: 501, image: manchurianWings },
         { name: 'Chami Special', price: 215, image: chamiSpecial },
         { name: 'Lido\'s Siphon Brewed Coffee', price: 143, image: lidosSiphonBrewedCoffee },
-        { name: 'BLC Feast', price: 1385, image: bilaoFeast },
-        { name: 'BLC Feast C', price: 2573, image: BlcFeast },
+        { name: 'BLC Feast', price: 1385, image:  BlcFeast},
+        { name: 'BLC Feast C', price: 2573, image: bilaoFeast },
         { name: 'Shrimp Balls', price: 479, image: shrimpBalls }
       ]
     }
@@ -80,14 +80,18 @@ export default {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     transition: box-shadow 0.3s ease; /* Smooth shadow transition */
     text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .card h3 {
     margin-bottom: 1rem;
   }
 
-  .card p {
+  .card p.price {
     color: #666666;
+    margin-top: auto; /* Push the price to the bottom */
   }
 
   .card-image {
@@ -121,6 +125,5 @@ export default {
       font-size: 12px;
       font-weight: bolder;
     }
-
-}
+  }
 </style>
